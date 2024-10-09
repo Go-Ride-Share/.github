@@ -1,5 +1,8 @@
 # Go Ride Share
 
+## Architecture Diagrams
+![image](../diagrams/Cloud_Architecture.png)
+
 ## How to run locally (Developer Guide)
 #### React Front End
 - run `npm install` to install all dependancies
