@@ -11,15 +11,6 @@ Sequence Diagrams are avaliable [here](https://github.com/Go-Ride-Share/.github/
 ![image](../diagrams/Cloud_Architecture.jpeg)
 
 ## How to run locally (Developer Guide)
-#### React Front End
-- run `npm install` to install all dependancies
-- In `.env` add:
-```
-REACT_APP_API_AUTH_URL=http://localhost:7071/api
-REACT_APP_API_BASE_URL=http://localhost:7072/api
-```
-- `npm start`
-- The website will open in your browser
 
 #### DB Layer
 - **NOTE:** You need to install Azure Functions Core Tools v4
@@ -53,6 +44,16 @@ REACT_APP_API_BASE_URL=http://localhost:7072/api
 "BASE_API_URL"="http://localhost:7073"
 ```
 - in terminal navigate to  `\AccountManager\` then `func start -p 7072`
+
+#### React Front End
+- run `npm install` to install all dependancies
+- In `.env` add:
+```
+REACT_APP_API_AUTH_URL=http://localhost:7071/api
+REACT_APP_API_BASE_URL=http://localhost:7072/api
+```
+- `npm start`
+- The website will open in your browser
 
 #### Flutter Front End (Android Mobile App)
 - Download: [Android Studio](https://developer.android.com/studio)
