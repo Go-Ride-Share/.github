@@ -66,3 +66,10 @@ REACT_APP_API_BASE_URL=http://localhost:7072/api
 REACT_APP_API_AUTH_URL=http://localhost:7071/api
 REACT_APP_API_BASE_URL=http://localhost:7072/api
 ```
+## Sequence Diagrams
+![image](../diagrams/Signup-user.png)
+![image](../diagrams/Login-user.png)
+![image](../diagrams/Get-user.png)
+![image](../diagrams/Edit-user.png)
+![image](../diagrams/Create-Update-Post.png)
+![image](../diagrams/Get-Posts.png)
