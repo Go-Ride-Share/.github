@@ -23,7 +23,11 @@ REACT_APP_API_BASE_URL=http://localhost:7072/api
 
 #### DB Layer
 - **NOTE:** You need to install Azure Functions Core Tools v4
-   - This can be done on mac using the following brew commands
+   - This can be done on mac using the following brew commands:
+     ```
+     brew tap azure/functions
+     brew install azure-functions-core-tools@4
+     ```
    - Or on windows using [Azure Tools](https://learn.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=windows%2Cisolated-process%2Cnode-v4%2Cpython-v2%2Chttp-trigger%2Ccontainer-apps&pivots=programming-language-csharp#install-the-azure-functions-core-tools:~:text=quickstart%20article.-,Install%20the%20Azure%20Functions%20Core%20Tools,-The%20recommended%20way).
 - Modify sample.local.settings.json to be local.settings.json in db-layer/DbAccessor and update the values to the following:
 ```
