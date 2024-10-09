@@ -1,8 +1,5 @@
 # Go Ride Share
 
-### Sequence Diagrams
-Sequence Diagrams are avaliable [here](https://github.com/Go-Ride-Share/.github/tree/main/diagrams)
-
 ### Endpoint Documentation
 - Each set of endpoints has its own `Endpoints.yaml` file describing endpoints
 - The "Swagger Viewer" extension on VScode is an easy way to render these documents
