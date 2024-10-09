@@ -70,6 +70,9 @@ Sequence Diagrams are avaliable [here](https://github.com/Go-Ride-Share/.github/
 
  - Then navigate to root directory `mobile-client` and run `flutter run`
 
+## Authentication Flow
+This diagram explains how the system handles user authentication, and how access to the logic and database is given to the user.
+![image](../diagrams/UserAuthenticationFlow.png)
 
 ## Sequence Diagrams
 ![image](../diagrams/Signup-user.png)
