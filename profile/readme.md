@@ -24,26 +24,26 @@ Sequence Diagrams are avaliable [here](https://github.com/Go-Ride-Share/.github/
 ```
 "DB_CONNECTION_STRING": "Server=\"test-data.mysql.database.azure.com\"; port=\"3306\";UserID=\"testadmin\";Password=\"Dbsofteng2\";Database=\"go-ride-share\";"
 ```
--  In terminal navigate to `db-layer\DbAccessor\` then run `func start -p 7073`
+-  In terminal navigate to `db-layer/DbAccessor/` then run `func start -p 7073`
 
 #### Logic Layer 1 (AccountManager)
-- Rename `sample.local.settings.json` to `local.settings.json` fill in the following values: (Secrets will be provided to you by your dev manager)
-```
-"BASE_API_URL": "http://localhost:7073"
-"OAUTH_CLIENT_SECRET_DB":
-"OAUTH_CLIENT_SECRET":
-"OAUTH_CLIENT_ID":
-"OAUTH_CLIENT_ID_DB":
-"OAUTH_TENANT_ID_DB":
-"OAUTH_TENANT_ID":
-``` 
-- in terminal navigate to `\AccountManager\` then run `func start -p 7071`
+- Open logic-layer repo and navigate to AccountManager directory.
+- `sample.local.settings.json` to `local.settings.json` **add in** the following values:
+   ```
+   "OAUTH_CLIENT_ID": "f",
+   "OAUTH_CLIENT_ID_DB": "f",
+   "OAUTH_CLIENT_SECRET": "f",
+   "OAUTH_CLIENT_SECRET_DB": "f",
+   "OAUTH_SCOPE": "f",
+   "OAUTH_SCOPE_DB": "f",
+   "OAUTH_TENANT_ID_DB": "f",
+   "OAUTH_TENANT_ID": "f"
+   ``` 
+- In terminal, navigate to directory `logic-layer/AccountManager/` then run `func start -p 7071`
 
 #### Logic Layer 2 (Logic)
-```
-"BASE_API_URL"="http://localhost:7073"
-```
-- in terminal navigate to  `\AccountManager\` then run `func start -p 7072`
+
+- Open logic-layer repo, in terminal navigate to  `logic-layer/Logic/` then run `func start -p 7072`
 
 #### React Front End
 - run `npm install` to install all dependancies
@@ -73,10 +73,10 @@ REACT_APP_API_BASE_URL=http://localhost:7072/api
    - MacOS: Use Homebrew in terminal, run `brew install --cask flutter`
    - Windows: [installation instructions](https://docs.flutter.dev/get-started/install/windows/mobile#install-the-flutter-sdk)
 
-- Open the repo, uncomment the following lines in `mobile-client/lib/constants.dart` to run the app locally. **Be sure to comment out the same variables below this to prevent errors:**
+- Open the repo, uncomment the following lines in `mobile-client/lib/constants.dart` to run the app locally. **Be sure to comment out the same variables below in the file to prevent errors:**
 
-   `REACT_APP_API_AUTH_URL=http://localhost:7071/api`
-   `REACT_APP_API_BASE_URL=http://localhost:7072/api`
+      REACT_APP_API_AUTH_URL=http://localhost:7071/api
+      REACT_APP_API_BASE_URL=http://localhost:7072/api
 
  - Then navigate to root directory `mobile-client` and run `flutter run`
 
