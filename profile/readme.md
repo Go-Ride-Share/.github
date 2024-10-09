@@ -19,14 +19,14 @@ Sequence Diagrams are avaliable [here](https://github.com/Go-Ride-Share/.github/
      brew tap azure/functions
      brew install azure-functions-core-tools@4
      ```
-   - Or on windows using [Azure Tools](https://learn.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=windows%2Cisolated-process%2Cnode-v4%2Cpython-v2%2Chttp-trigger%2Ccontainer-apps&pivots=programming-language-csharp#install-the-azure-functions-core-tools:~:text=quickstart%20article.-,Install%20the%20Azure%20Functions%20Core%20Tools,-The%20recommended%20way).
-- Modify sample.local.settings.json to be local.settings.json in db-layer/DbAccessor and update the values to the following:
+   - Or on windows using [Azure Tools](https://learn.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=windows%2Cisolated-process%2Cnode-v4%2Cpython-v2%2Chttp-trigger%2Ccontainer-apps&pivots=programming-language-csharp#install-the-azure-functions-core-tools:~:text=quickstart%20article.-,Install%20the%20Azure%20Functions%20Core%20Tools,-The%20recommended%20way). Installation might need system restart.
+- Modify `sample.local.settings.json` to be `local.settings.json` in **db-layer/DbAccessor** and update the values to the following:
 ```
 "DB_CONNECTION_STRING": "Server=\"test-data.mysql.database.azure.com\"; port=\"3306\";UserID=\"testadmin\";Password=\"Dbsofteng2\";Database=\"go-ride-share\";"
 ```
--  in terminal navigate to `\DbAccessor\` then `func start -p 7073`
+-  In terminal navigate to `db-layer\DbAccessor\` then run `func start -p 7073`
 
-#### Logic Layer (AccountManager)
+#### Logic Layer 1 (AccountManager)
 - Rename `sample.local.settings.json` to `local.settings.json` fill in the following values: (Secrets will be provided to you by your dev manager)
 ```
 "BASE_API_URL": "http://localhost:7073"
@@ -39,11 +39,11 @@ Sequence Diagrams are avaliable [here](https://github.com/Go-Ride-Share/.github/
 ``` 
 - in terminal navigate to `\AccountManager\` then run `func start -p 7071`
 
-#### Logic Layer (Logic)
+#### Logic Layer 2 (Logic)
 ```
 "BASE_API_URL"="http://localhost:7073"
 ```
-- in terminal navigate to  `\AccountManager\` then `func start -p 7072`
+- in terminal navigate to  `\AccountManager\` then run `func start -p 7072`
 
 #### React Front End
 - run `npm install` to install all dependancies
@@ -56,17 +56,31 @@ REACT_APP_API_BASE_URL=http://localhost:7072/api
 - The website will open in your browser
 
 #### Flutter Front End (Android Mobile App)
-- Download: [Android Studio](https://developer.android.com/studio)
-   - Create a new project will all of the default settings
-   - In device manager, click "Play" to start an emulator (tip: if this doesn’t work, try cold booting)
-- Install Flutter 
-   - Tip for mac with Homebrew, Run: `brew install --cask flutter`
-- in terminal navigate navigate to mobile-client and run ‘flutter run’
+- Requirement: Ensure you have launched an Android emulator or connected a physical device
+   - Option 1: Start the emulator from command line ([see installation instructions](https://developer.android.com/studio/run/emulator-commandline)) 
 
-```
-REACT_APP_API_AUTH_URL=http://localhost:7071/api
-REACT_APP_API_BASE_URL=http://localhost:7072/api
-```
+      You can run `flutter emulators` to see a list of available emulators, then run `flutter emulators --launch <emulator_name>` to start an emulator.
+
+      OR, neat VSCode trick: CTRL+SHIFT+P, type "Select Devices" and select the emulator you want to launch.   
+      
+   - Option 2: Launch Android studio and use its existing emulator. 
+    
+      In device manager, click green "Play" button to start an emulator (tip: if this doesn’t work, try cold booting).
+
+      If you do not have Android studio installed, [see installation instructions](https://developer.android.com/studio).
+
+- Install Flutter on your machine
+   - MacOS: Use Homebrew in terminal, run `brew install --cask flutter`
+   - Windows: [installation instructions](https://docs.flutter.dev/get-started/install/windows/mobile#install-the-flutter-sdk)
+
+- Open the repo, uncomment the following lines in `mobile-client/lib/constants.dart` to run the app locally. **Be sure to comment out the same variables below this to prevent errors:**
+
+   `REACT_APP_API_AUTH_URL=http://localhost:7071/api`
+   `REACT_APP_API_BASE_URL=http://localhost:7072/api`
+
+ - Then navigate to root directory `mobile-client` and run `flutter run`
+
+
 ## Sequence Diagrams
 ![image](../diagrams/Signup-user.png)
 ![image](../diagrams/Login-user.png)
