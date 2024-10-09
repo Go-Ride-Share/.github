@@ -54,13 +54,6 @@ REACT_APP_API_BASE_URL=http://localhost:7072/api
 ```
 - in terminal navigate to  `\AccountManager\` then `func start -p 7072`
 
-#### DB Layer
-- Modify sample.local.settings.json to be local.settings.json in db-layer/DbAccessor and update the values to the following:
-```
-"DB_CONNECTION_STRING":
-```
-- in terminal navigate to `\DbAccessor\` then `func start -p 7073`
-
 #### Flutter Front End (Android Mobile App)
 - Download: [Android Studio](https://developer.android.com/studio)
    - Create a new project will all of the default settings
