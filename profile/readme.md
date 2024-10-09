@@ -8,7 +8,7 @@ Sequence Diagrams are avaliable [here](https://github.com/Go-Ride-Share/.github/
 - The "Swagger Viewer" extension on VScode is an easy way to render these documents
 
 ## Architecture Diagrams
-![image](../diagrams/Cloud_Architecture.png)
+![image](../diagrams/Cloud_Architecture.jpeg)
 
 ## How to run locally (Developer Guide)
 #### React Front End
