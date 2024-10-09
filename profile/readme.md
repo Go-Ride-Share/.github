@@ -1,5 +1,9 @@
 # Go Ride Share
 
+### Endpoint Documentation
+- Each set of endpoints has its own `Endpoints.yaml` file describing endpoints
+- The "Swagger Viewer" extension on VScode is an easy way to render these documents
+
 ## Architecture Diagrams
 ![image](../diagrams/Cloud_Architecture.png)
 
