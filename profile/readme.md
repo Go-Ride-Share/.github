@@ -28,17 +28,7 @@ Sequence Diagrams are avaliable [here](https://github.com/Go-Ride-Share/.github/
 
 #### Logic Layer 1 (AccountManager)
 - Open logic-layer repo and navigate to AccountManager directory.
-- `sample.local.settings.json` to `local.settings.json` **add in** the following values:
-   ```
-   "OAUTH_CLIENT_ID": "f",
-   "OAUTH_CLIENT_ID_DB": "f",
-   "OAUTH_CLIENT_SECRET": "f",
-   "OAUTH_CLIENT_SECRET_DB": "f",
-   "OAUTH_SCOPE": "f",
-   "OAUTH_SCOPE_DB": "f",
-   "OAUTH_TENANT_ID_DB": "f",
-   "OAUTH_TENANT_ID": "f"
-   ``` 
+- Rename file `sample.local.settings.json` to `local.settings.json`
 - In terminal, navigate to directory `logic-layer/AccountManager/` then run `func start -p 7071`
 
 #### Logic Layer 2 (Logic)
@@ -49,8 +39,8 @@ Sequence Diagrams are avaliable [here](https://github.com/Go-Ride-Share/.github/
 - run `npm install` to install all dependancies
 - In `.env` add:
 ```
-REACT_APP_API_AUTH_URL=http://localhost:7071/api
-REACT_APP_API_BASE_URL=http://localhost:7072/api
+   REACT_APP_API_AUTH_URL=http://localhost:7071/api
+   REACT_APP_API_BASE_URL=http://localhost:7072/api
 ```
 - `npm start`
 - The website will open in your browser
