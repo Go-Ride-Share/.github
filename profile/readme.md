@@ -61,10 +61,11 @@
    - Windows: [installation instructions](https://docs.flutter.dev/get-started/install/windows/mobile#install-the-flutter-sdk)
 
 - Open the repo, uncomment the following lines in `mobile-client/lib/constants.dart` to run the app locally. **Be sure to comment out the same variables below in the file to prevent errors:**
-
-      REACT_APP_API_AUTH_URL=http://localhost:7071/api
-      REACT_APP_API_BASE_URL=http://localhost:7072/api
-
+```
+   // UNCOMMENT THE FOLLOWING 2 LINES TO USE LOCALHOST
+   static const String API_AUTH_URL = "http://localhost:7071/api";
+   static const String API_BASE_URL = "http://localhost:7072/api";
+```
  - Then navigate to root directory `mobile-client` and run `flutter run`
 
 ## Authentication Flow
