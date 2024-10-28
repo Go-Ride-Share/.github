@@ -9,7 +9,8 @@ services:
       AzureWebJobsStorage: "UseDevelopmentStorage=true"
       FUNCTIONS_WORKER_RUNTIME: "dotnet-isolated"
       DB_CONNECTION_STRING: "Server=\"test-data.mysql.database.azure.com\"; port=\"3306\";UserID=\"testadmin\";Password=\"Dbsofteng2\";Database=\"go-ride-share\";"
-
+      MONGODB_ATLAS_URI: "mongodb+srv://gorideshare_admin:6ALB8QCEDGk2hn4H@gorideshare.3rwia.mongodb.net/?retryWrites=true&w=majority&appName=GoRideShare"
+      DB_URL: "http://db-accessor:80"
 
   account-manager:
     build:
