@@ -7,7 +7,15 @@
 ## Architecture Diagrams
 ![image](../diagrams/Cloud_Architecture.jpeg)
 
-## How to run locally (Developer Guide)
+## How to run locally in a container (Developer Guide)
+#### DB Layer and Logic Layer (containerized)
+- download the [docker-compose.yml file](https://github.com/Go-Ride-Share/.github/blob/main/docker-compose.yml) and place it in the project root directory (the directory that contains all four layers)
+- open the project root directory in terminal and run `docker-compose up --build --force-recreate --remove-orphans`. This will start all three functions apps in both the `Db Layer` and the `Logic Layer`.
+
+#### React Front End and Flutter Front End
+- WIP, follow the non-contrainerized instruction for now
+  
+## How to run locally, non-containerized (Developer Guide)
 
 #### DB Layer
 - **NOTE:** You need to install Azure Functions Core Tools v4
