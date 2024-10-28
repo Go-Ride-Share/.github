@@ -1,0 +1,42 @@
+services:
+  db-accessor:
+    build:
+      context: ./db-layer/DbAccessor
+      dockerfile: Dockerfile
+    ports:
+      - "7073:80"
+    environment:
+      AzureWebJobsStorage: "UseDevelopmentStorage=true"
+      FUNCTIONS_WORKER_RUNTIME: "dotnet-isolated"
+      DB_CONNECTION_STRING: "Server=\"test-data.mysql.database.azure.com\"; port=\"3306\";UserID=\"testadmin\";Password=\"Dbsofteng2\";Database=\"go-ride-share\";"
+
+
+  account-manager:
+    build:
+      context: ./logic-layer/AccountManager
+      dockerfile: Dockerfile
+    ports:
+      - "7072:80"
+    environment:
+      AzureWebJobsStorage: "UseDevelopmentStorage=true"
+      FUNCTIONS_WORKER_RUNTIME: "dotnet-isolated"
+      BASE_API_URL: "http://db-accessor:80"
+      OAUTH_CLIENT_ID: "f"
+      OAUTH_CLIENT_ID_DB: "f"
+      OAUTH_CLIENT_SECRET: "f"
+      OAUTH_CLIENT_SECRET_DB: "f"
+      OAUTH_SCOPE: "f"
+      OAUTH_SCOPE_DB: "f"
+      OAUTH_TENANT_ID_DB: "f"
+      OAUTH_TENANT_ID: "f"
+
+  logic:
+    build:
+      context: ./logic-layer/Logic
+      dockerfile: Dockerfile
+    ports:
+      - "7071:80"
+    environment:
+      AzureWebJobsStorage: "UseDevelopmentStorage=true"
+      FUNCTIONS_WORKER_RUNTIME: "dotnet-isolated"
+      BASE_API_URL: "http://db-accessor:80"
