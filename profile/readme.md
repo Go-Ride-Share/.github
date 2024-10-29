@@ -9,10 +9,9 @@
 
 ## How to run locally in a container (Developer Guide)
 #### DB Layer and Logic Layer and React Front End (containerized)
-- download the [docker-compose.yml file](https://github.com/Go-Ride-Share/.github/blob/main/docker-compose.yml) and place it in the project root directory (the directory that contains all four layers)
-- open the project root directory in terminal and run `docker-compose up --build --force-recreate --remove-orphans`. This will start all three functions apps in both the `Db Layer` and the `Logic Layer`.
-
-
+- Download the [docker-compose.yml file](https://github.com/Go-Ride-Share/.github/blob/main/docker-compose.yml) and place it in the project root directory (the directory that contains all four layers)
+- Open the project root directory in terminal and run `docker-compose up --build --force-recreate --remove-orphans`. This will start all three functions apps in both the `Db Layer`, `Logic Layer` and the `React Front End`.
+- To access the `React Front End` head to the `http://localhost:3000`.
 
 ### Flutter Front End
 - WIP, follow the non-contrainerized instruction for now
