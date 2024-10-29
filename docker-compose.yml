@@ -30,6 +30,8 @@ services:
       OAUTH_SCOPE_DB: "f"
       OAUTH_TENANT_ID_DB: "f"
       OAUTH_TENANT_ID: "f"
+      CORS_ALLOWED_ORIGINS: '["http://localhost:3000"]'
+      CONTAINER_NAME: "project-repo"
 
   logic:
     build:
@@ -41,3 +43,16 @@ services:
       AzureWebJobsStorage: "UseDevelopmentStorage=true"
       FUNCTIONS_WORKER_RUNTIME: "dotnet-isolated"
       BASE_API_URL: "http://db-accessor:80"
+      CORS_ALLOWED_ORIGINS: '["http://localhost:3000"]'
+      CONTAINER_NAME: "project-repo"
+
+  web-client:
+    build:
+      context: ./web-client
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      REACT_APP_API_BASE_URL: "http://localhost:7071/api"
+      REACT_APP_API_AUTH_URL: "http://localhost:7072/api"
+      REACT_APP_GOOGLE_MAPS_API_KEY: "AIzaSyCDsw8M-tdxGjgyHABHJDNNiOvOeWHO83E"
