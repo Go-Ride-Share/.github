@@ -8,8 +8,13 @@
 ![image](../diagrams/Cloud_Architecture.jpeg)
 
 ## How to run locally in a container (Developer Guide)
-#### DB Layer and Logic Layer and React Front End (containerized)
-- Download the [docker-compose.yml file](https://github.com/Go-Ride-Share/.github/blob/main/docker-compose.yml) and place it in the project root directory (the directory that contains all four layers)
+#### DB Layer, Logic Layer, React Front End and the Database instances (containerized)
+- Download the [docker-compose.yml file](https://github.com/Go-Ride-Share/.github/blob/main/docker-compose.yml) and [.env file](https://github.com/Go-Ride-Share/.github/blob/main/.env) place it in the project root directory (the directory that contains all four layers)
+- In `.env` add following to connect to the local database instances running locally in the container:
+```
+   DB_CONNECTION_STRING: "Server=mysql;Port=3306;Database=go-ride-share;UserID=testadmin;Password=SoftEng2db;"
+   MONGODB_ATLAS_URI: "mongodb://testadmin:SoftEng2db@mongodb:27017/go_ride_share_db?authSource=admin"
+```
 - Open the project root directory in terminal and run `docker-compose up --build --force-recreate --remove-orphans`. This will start all three functions apps in both the `Db Layer`, `Logic Layer` and the `React Front End`.
 - To access the `React Front End` head to the `http://localhost:3000`.
 

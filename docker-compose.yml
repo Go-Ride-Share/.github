@@ -56,3 +56,31 @@ services:
       REACT_APP_API_BASE_URL: "http://localhost:7071/api"
       REACT_APP_API_AUTH_URL: "http://localhost:7072/api"
       REACT_APP_GOOGLE_MAPS_API_KEY: ${REACT_APP_GOOGLE_MAPS_API_KEY}
+
+  mysql:
+    image: mysql:8.0
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: go-ride-share
+      MYSQL_USER: testadmin
+      MYSQL_PASSWORD: SoftEng2db
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./.github/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+
+  mongodb:
+    image: mongo:4.4
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: testadmin
+      MONGO_INITDB_ROOT_PASSWORD: SoftEng2db
+      MONGO_INITDB_DATABASE: user_chats
+    volumes:
+      - mongodb-data:/data/db
+
+volumes:
+  mysql-data:
+  mongodb-data:
