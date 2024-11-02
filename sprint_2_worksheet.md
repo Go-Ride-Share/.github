@@ -26,6 +26,8 @@ In the final sprint, We foresee the following potential issues:
 ## Show Off
 
 ### Muhammad
+I focused on the web UI this sprint, specifically building out the messaging feature. Users can now open a responsive drawer to view all their conversations. When a conversation is selected, a chat window opens where they can send and receive messages seamlessly. The UI is designed to be clean and user-friendly, offering an engaging experience. Overall, I’m really proud of how intuitive and polished this feature turned out!
+[UI Snapshots](https://github.com/Go-Ride-Share/.github/tree/main/sprint_2_images)
 
 ### Asit
 
