@@ -83,3 +83,35 @@ October 10 (6:30 PM - 7PM)
 - Meeting goal: Discussing what needs to be finished for tomorrow (Friday October 11)
 - Organized our meeting with the TA and discussed our availability. 
 - Cleaned up meeting minutes and worksheet for Sprint 1
+
+October 13 (2 PM - 3 PM)
+- Meeting goal: General discussion regarding Sprint 2 and how Sprint 1 went
+- Discussed work distribution for Sprint 2 and agreed on ticket contents
+- Confirmed deadlines and evaluated Sprint 1 (decided on having tickets on a single .github repo rather than duplicates over multiple repos)
+- Discussed MongoDB and how it can be integrated into our app
+
+October 15 (7 PM - 8PM)
+- Meeting goal: Discuss and flesh out API for chatting feature
+- Decided on the contents of different API calls/responses for ease when working across different frontend/backend repos
+- Discussed which API endpoints we’d need. 
+
+October 20 (6 PM - 7 PM)
+- Meeting goal: Checking up on progress being made
+- Divided up remaining work for refactoring/testing, and polishing the logic layer
+- Divided up work regarding acceptance/end to end/system tests
+- Discussed containerization with Docker, specifically evaluating how long it would it take
+
+October 26 (6 PM - 7 PM)
+- Meeting goals: Open forum to discuss any questions any group members have
+- Went over dummy endpoints created in the logic layer
+- Discussed database tokens and how they are handled
+- Decided that questions about the API can be freely accessed in the ‘general’ channel on Discord
+
+October 31 (11 AM - 12 PM)
+- Meeting goals: In-person collaborative working in the Engineering Library at the University of Manitoba
+- Discussed how dates are being parsed in ISO8601 format in the mobile front-end and how it could clash with the logic layer. Discussed that MongoDB is storing date in a DateTime format. 
+
+November 1 (5:30 PM - 6:30 PM)
+- Meeting goals: Divide up remaining work for Sprint 2 and preliminary work for Sprint 3
+- Divied up work regarding the worksheet for Sprint 2, as well as the CI/CD pipeline. 
+- Discussed how the architecture diagrams have changed over Sprint 2.
