@@ -4,8 +4,27 @@
 ## Regression Testing
 
 ## Testing Slowdown
+We have one test plan for each of the layers and have been able to test all unit tests and integration tests as it did not slow down our CI/CD pipeline significantly enough for that to be necessary.
 
 ## Not Testing
+Testing coverage for each tier:
+- Presentation Tier:
+  - Mobile UI: 
+    - Models Layer, Pages Layer, Services Layer, and Widgets Layer: not tested (as we have a very thin client for the mobile UI)
+  - Web UI: 
+    - Components Layer: fully tested
+    - API Layer: fully tested
+- Logic Layer Tier: 
+  - Account Manager Layer: fully tested
+  - Logic Layer: fully tested
+  - Google Cloud API Layer: no tests
+- Database Tier: no tests
+
+Coverage report for Web UI tier:
+![Coverage report for Web UI](sprint_2_images/Coverage_Report_Web_UI.png)
+
+Coverage report for logic tier:
+![Coverage report for Logic tier](sprint_2_images/Coverage_Report_Logic_Tier.png)
 
 ## Profiler
 
@@ -34,6 +53,7 @@ I focused on the web UI this sprint, specifically building out the messaging fea
 ### Ben
 
 ### Bilal
+I focused on the mobile UI this sprint and built out the UI for the messaging feature. Mobile users can now see other users' posts, contact other users, and send them messages directly, as well as see the conversation they've had/are having in a clean inbox. I don't have much experience using Flutter so I'm particularly proud of how this feature has turned out. 
 
 ### Dhairya
 
