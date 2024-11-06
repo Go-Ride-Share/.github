@@ -2,6 +2,19 @@
 ### [Meeting Minutes]()
 
 ## Regression Testing
+Regression tests are being run (via npm) for all tests, and done so as part of our CI/CD pipeline for all repos (aside from the mobile-client and db-layer repos, which do not contain tests). 
+
+Web Client (web-client repo): 
+- Link to regression testing script: https://github.com/Go-Ride-Share/web-client/blob/main/.github/workflows/node.js.yml 
+- Last snapshot/results of execution (Link: https://github.com/Go-Ride-Share/web-client/actions/runs/11658891347/job/32458605796 ), Screenshot:
+![Web Client Regression Tests Screenshot](sprint_2_images/Web_Client_Regression_Tests_Screenshot.png)
+
+Logic (logic-layer repo):
+- Link to regression testing script:
+- Last snapshot/results of execution for AccountManager Layer (Link: https://github.com/Go-Ride-Share/logic-layer/actions/runs/11669771279/job/32493002794), Screenshot: 
+![AccountManager Regression Tests Screenshot](sprint_2_images/AccountManager_Regression_Tests_Screenshot.png)
+- Last snapshot/results of execution for Logic Layer (Link: https://github.com/Go-Ride-Share/logic-layer/actions/runs/11669771284/job/32492486178), Screenshot:
+![Logic Regression Tests Screenshot](sprint_2_images/Logic_Regression_Tests_Screenshot.png)
 
 ## Testing Slowdown
 We have one test plan for each of the layers and have been able to test all unit tests and integration tests as it did not slow down our CI/CD pipeline significantly enough for that to be necessary.
