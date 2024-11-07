@@ -62,6 +62,8 @@ I focused on the web UI this sprint, specifically building out the messaging fea
 ### Asit
 
 ### Ben
+For this sprint I set up dummy endpoints on the logic layer in the first week of the sprint, allowing for the UI to be developt against these endpoints [(PR link)](https://github.com/Go-Ride-Share/logic-layer/pull/43). This created consistent object definitions that could be referenced when creating the DB layer responses.
+Then, near the end of the sprint I spent some time cleaning up the DB layer, improving validation, error messages and code quality [(PR link)](https://github.com/Go-Ride-Share/db-layer/pull/46).
 
 ### Bilal
 I focused on the mobile UI this sprint and built out the UI for the messaging feature. Mobile users can now see other users' posts, contact other users, and send them messages directly, as well as see the conversation they've had/are having in a clean inbox. I don't have much experience using Flutter so I'm particularly proud of how this feature has turned out. 
