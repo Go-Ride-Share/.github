@@ -60,6 +60,9 @@ I focused on the web UI this sprint, specifically building out the messaging fea
 [UI Snapshots](https://github.com/Go-Ride-Share/.github/tree/main/sprint_2_images)
 
 ### Asit
+This sprint, I set up a MongoDB database and developed API endpoints (PR [here](https://github.com/Go-Ride-Share/db-layer/pull/48/files)) for database access. I also began containerizing a Flutter app with emulator (draft PRs [here](https://github.com/Go-Ride-Share/.github/pull/23) and [here](https://github.com/Go-Ride-Share/mobile-client/pull/25)) and learning GitHub Actions workflows to support its builds and pushes. Creating a Docker image for the emulator was especially challenging, as I initially assumed that running an emulator required OS-level virtualization.
+
+Overall, I'm proud of the breadth of technologies I tackled during this sprint. Every tool and concept was basically new for me, including emulator on images, GitHub Actions for CI/CD, configuring a serverless MongoDB instance, and writing APIs in C#. This experience deepened my skills across a diverse tech stack and was a valuable learning opportunity.
 
 ### Ben
 For this sprint I set up dummy endpoints on the logic layer in the first week of the sprint, allowing for the UI to be developt against these endpoints [(PR link)](https://github.com/Go-Ride-Share/logic-layer/pull/43). This created consistent object definitions that could be referenced when creating the DB layer responses.
