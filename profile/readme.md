@@ -5,15 +5,15 @@
 - The "Swagger Viewer" extension on VScode is an easy way to render these documents
 
 ## Architecture Diagrams
-![image](../diagrams/Cloud_Architecture.jpeg)
+![image](../diagrams/Cloud_Architecture.png)
 
 ## How to run locally in a container (Developer Guide)
 #### DB Layer, Logic Layer, React Front End and the Database instances (containerized)
 - Download the [docker-compose.yml file](https://github.com/Go-Ride-Share/.github/blob/main/docker-compose.yml) and [.env file](https://github.com/Go-Ride-Share/.github/blob/main/.env) place it in the project root directory (the directory that contains all four layers)
 - In `.env` add following to connect to the local database instances running locally in the container:
 ```
-   DB_CONNECTION_STRING: "Server=mysql;Port=3306;Database=go-ride-share;UserID=testadmin;Password=SoftEng2db;"
-   MONGODB_ATLAS_URI: "mongodb://testadmin:SoftEng2db@mongodb:27017/go_ride_share_db?authSource=admin"
+   DB_CONNECTION_STRING="Server=mysql;Port=3306;Database=go-ride-share;UserID=testadmin;Password=SoftEng2db;"
+   MONGODB_ATLAS_URI="mongodb://testadmin:SoftEng2db@mongodb:27017/go_ride_share_db?authSource=admin"
 ```
 - Open the project root directory in terminal and run `docker-compose up --build --force-recreate --remove-orphans`. This will start all three functions apps in both the `Db Layer`, `Logic Layer` and the `React Front End`.
 - To access the `React Front End` head to the `http://localhost:3000`.
@@ -24,6 +24,8 @@
 ## How to run locally, non-containerized (Developer Guide)
 
 #### DB Layer
+> [!WARNING]  
+> Non containerized method is deprecated for DB layer. Please use containerized steps to run this locally.
 - **NOTE:** You need to install Azure Functions Core Tools v4
    - This can be done on mac using the following brew commands:
      ```
@@ -38,12 +40,15 @@
 -  In terminal navigate to `db-layer/DbAccessor/` then run `func start -p 7073`
 
 #### Logic Layer 1 (AccountManager)
+> [!WARNING]  
+> Non containerized method is deprecated for AccountManager. Please use containerized steps to run this locally.
 - Open logic-layer repo and navigate to AccountManager directory.
 - Rename file `sample.local.settings.json` to `local.settings.json`
 - In terminal, navigate to directory `logic-layer/AccountManager/` then run `func start -p 7071`
 
 #### Logic Layer 2 (Logic)
-
+> [!WARNING]  
+> Non containerized method is deprecated for Logic layer. Please use containerized steps to run this locally.
 - Open logic-layer repo, in terminal navigate to  `logic-layer/Logic/` then run `func start -p 7072`
 
 #### React Front End
