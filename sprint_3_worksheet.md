@@ -3,6 +3,12 @@
 ## Load Testing
 
 ## Security Analysis
+1. **Security Analysis Choice**
+For our security analysis tool we used SonarQube. Their free tier comes with Sonar Cloud, which is essentially a web app with that includes all the functionality we needed.
+SonarQuebe Cloud allows you to log in with GitHub which is very convenient, as it gives you the option to import your organization along with all the repos diretly into Sonar. For The WebUI, and Db Layer, everything worked perfectly and seamlesly. All changes in the main branch are automatically analyzed in Sonar. For mobile, we had to add a workflow file and a config file, but after that everything integrated with no problems.
+Our Logic layer, though, gave us some trouble. When it was auto-imported into Sonar, it said the main branch had no code, even though you could explore the branch on Sonar and see that it does indeed have code.After trying a few things, we learned that the problem was that we had 4 C# proejcts in that repo: Logic, DbAccessor, and their respective unit test porjects. What we had to do was run the analysis manually using the command line. The good thing is Sonar gave us the instructions on how to do it.
+2. **5 Problems In Our Code**
+   
 
 ## Continuous Integration and deployment (CI/CD)
 
@@ -51,3 +57,16 @@ We have demonstrated the prod enviornment's CI/CD workflow below. However, we ha
 ## Thoughts
 
 ## Other thoughts
+
+## Appendix
+
+### SonarQube Logs
+#### Db Layer Logs
+<img width="1440" alt="Screenshot 2024-12-06 at 3 24 01 AM" src="https://github.com/user-attachments/assets/6923ef16-0878-445d-aa49-2c6a058a4bab">
+<img width="1440" alt="Screenshot 2024-12-06 at 3 28 26 AM" src="https://github.com/user-attachments/assets/97d5b067-1b2c-4802-b3cd-a1ad85b489a5">
+<img width="1438" alt="Screenshot 2024-12-06 at 3 28 44 AM" src="https://github.com/user-attachments/assets/9835eee3-161f-4eaf-a1d2-2695b2b9fb7a">
+<img width="1436" alt="Screenshot 2024-12-06 at 3 28 52 AM" src="https://github.com/user-attachments/assets/331e431e-2210-41ca-bd47-620fee0a02a6">
+<img width="1440" alt="Screenshot 2024-12-06 at 3 28 59 AM" src="https://github.com/user-attachments/assets/fc8d4f73-2d77-4963-b0ac-c6d622fae1ba">
+
+
+
