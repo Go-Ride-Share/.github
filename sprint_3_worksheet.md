@@ -67,6 +67,9 @@ We have demonstrated the prod enviornment's CI/CD workflow below. However, we ha
 <img width="1438" alt="Screenshot 2024-12-06 at 3 28 44 AM" src="https://github.com/user-attachments/assets/9835eee3-161f-4eaf-a1d2-2695b2b9fb7a">
 <img width="1436" alt="Screenshot 2024-12-06 at 3 28 52 AM" src="https://github.com/user-attachments/assets/331e431e-2210-41ca-bd47-620fee0a02a6">
 <img width="1440" alt="Screenshot 2024-12-06 at 3 28 59 AM" src="https://github.com/user-attachments/assets/fc8d4f73-2d77-4963-b0ac-c6d622fae1ba">
-
-
-
+<img width="1440" alt="Screenshot 2024-12-06 at 11 21 50 AM" src="https://github.com/user-attachments/assets/6ed8c233-f2ec-4146-ab84-af83830ace8f">
+<img width="1440" alt="Screenshot 2024-12-06 at 11 21 59 AM" src="https://github.com/user-attachments/assets/9422b1ea-2ffc-4307-89ff-3fa7532b236b">
+<img width="1440" alt="Screenshot 2024-12-06 at 11 23 54 AM" src="https://github.com/user-attachments/assets/6590e148-0401-406c-a3d8-e6a65ed06efd">
+<img width="1440" alt="Screenshot 2024-12-06 at 11 24 07 AM" src="https://github.com/user-attachments/assets/108b04d4-bbf0-4aa3-89aa-8e64c2e8cb01">
+<img width="1440" alt="Screenshot 2024-12-06 at 11 25 51 AM" src="https://github.com/user-attachments/assets/c10c71ee-dcb1-40c2-954c-a116229ea757">
+<img width="1440" alt="Screenshot 2024-12-06 at 12 33 27 PM" src="https://github.com/user-attachments/assets/9a8d31a6-6f10-4f32-a646-237dc678ca98">
