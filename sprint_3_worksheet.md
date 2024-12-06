@@ -8,7 +8,13 @@ For our security analysis tool we used SonarQube. Their free tier comes with Son
 SonarQuebe Cloud allows you to log in with GitHub which is very convenient, as it gives you the option to import your organization along with all the repos diretly into Sonar. For The WebUI, and Db Layer, everything worked perfectly and seamlesly. All changes in the main branch are automatically analyzed in Sonar. For mobile, we had to add a workflow file and a config file, but after that everything integrated with no problems.
 Our Logic layer, though, gave us some trouble. When it was auto-imported into Sonar, it said the main branch had no code, even though you could explore the branch on Sonar and see that it does indeed have code.After trying a few things, we learned that the problem was that we had 4 C# proejcts in that repo: Logic, DbAccessor, and their respective unit test porjects. What we had to do was run the analysis manually using the command line. The good thing is Sonar gave us the instructions on how to do it.
 2. **5 Problems In Our Code**
-   
+   SonarQube pointed our 7 security problems in our code. 6 of them where instances of logging user-controlled data, which is calssified as a minor issue. We do this when we print the request body before procesing it. The reason this is an issues is because the user can put anything in the logs, including fake logs. The proposed fix is to santize the request body by replacing '\n' chars with '-'. Then, even if the user attempts to fake the logs, it will be clear since they will all go in one line.
+   Another issue brought up is that we are also constructing the URL using user-controlled data in GetPost endpoint. The user passes a user-id as a route parameter, and will retrieve info about that user by passing that user-id to the databse layer as a route parameter as well. The issue is that the maliscious user can pass a URI instead of a user-id, and isntead of accessing the database with `...User/{user_id}`, the logic layer would access it with `User/some/other/endpoint`. This produces uninteded results and given gice the user acces to an endpoint they are not authroized to access.
+   To fix this, we url-encoded the user-controlled parameter before appending it to the URL. This replaces all characters that are not safe for URLs with their encoded equivalents. So, User/some/other/endpoint` would become `User/some%2Fother$2Fendpoint`, preventing the user from being able to inject URI paths.
+   There were no other security issues found in our code.
+3. **Fix**
+   The major issues discovered by Sonar was fixed in [this commit](https://github.com/Go-Ride-Share/logic-layer/commit/3c7f820904e9e70e45589776d8dd8f9904375723).
+
 
 ## Continuous Integration and deployment (CI/CD)
 
