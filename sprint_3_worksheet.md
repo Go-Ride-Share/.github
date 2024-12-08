@@ -2,7 +2,7 @@
 
 ## Load Testing
 ### Testing Tool
-For our load testing, we have used Apache JMeter. This allowed us to simualte high numbers of concurrent users and effectively gauge the performance and scalability of our API under simulated real-world conditions.
+For our load testing, we have used **Apache JMeter**. This allowed us to simualte high numbers of concurrent users and effectively gauge the performance and scalability of our API under simulated real-world conditions.
 
 ### Test Cases
 Our testing was structured to gradually increase the load, allowing us to monitor how the system scaled and how performance metrics changed with increased user activity. Here’s a detailed look at our phased testing approach:
