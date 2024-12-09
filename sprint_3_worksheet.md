@@ -107,6 +107,8 @@ Reflecting on the project, we recognize the necessity for a more cohesive and st
 
 ## Other thoughts
 
+The current project setup is outstanding, offering a comprehensive learning experience by combining technical skills, teamwork, and real-world practices like CI/CD pipelines and Docker. It pushes students to deliver high-quality, innovative solutions while maintaining a clear and structured progression through sprints and evaluations. Regarding the "A+ exceptional" requirements—such as Kubernetes-controlled deployment, an additional frontend, or load balancers—these are impressive challenges that drive innovation. However, softening these requirements could better balance the learning objectives and the workload, allowing teams to achieve an A+ by delivering a fully functional, complete project that demonstrates strong technical and creative execution. More check-ins are unnecessary, as the sprint-based progress tracking already keeps teams on track, but optional consultations could provide extra support for struggling teams. Overall, the current setup is excellent.
+
 ## Appendix
 
 ### SonarQube Logs
