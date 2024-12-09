@@ -103,6 +103,8 @@ We have demonstrated the prod enviornment's CI/CD workflow below. However, we ha
 
 ## Thoughts
 
+Reflecting on the project, we recognize the necessity for a more cohesive and standardized approach across our mobile and web clients. Initially, our development efforts resulted in significantly divergent UI designs between the two platforms, which was not in line with our goal of consistent user experience. Had we understood the importance of UI consistency earlier, we would have advocated for unified design guidelines from the outset to ensure that both platforms mirrored each other closely in aesthetics and functionality. Additionally, our API development could have greatly benefited from a strict adherence to REST principles from the beginning. The lack of a structured naming convention led to a substantial refactoring effort later in the project. Implementing these principles early on would have streamlined our development process, reduced the need for such extensive refactoring, and ultimately saved time and resources, as this led our frontend developers to frequently change the endpoints, disrupting their workflow. Moreover, inconsistent API documentation made it difficult for them to accurately target the correct endpoints. Having structured, clear API documentation from the start would have enabled smoother and more efficient integration between our frontend and backend teams, enhancing productivity and reducing errors.
+
 ## Other thoughts
 
 ## Appendix
