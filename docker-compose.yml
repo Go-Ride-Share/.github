@@ -3,6 +3,11 @@ services:
     build:
       context: ./db-layer/DbAccessor
       dockerfile: Dockerfile
+    depends_on:
+      mysql:
+        condition: service_started
+      mongodb:
+        condition: service_started
     ports:
       - "7073:80"
     environment:
@@ -10,12 +15,14 @@ services:
       FUNCTIONS_WORKER_RUNTIME: "dotnet-isolated"
       DB_CONNECTION_STRING: ${DB_CONNECTION_STRING}
       MONGODB_ATLAS_URI: ${MONGODB_ATLAS_URI}
-      DB_URL: "http://db-accessor:80"
 
   account-manager:
     build:
       context: ./logic-layer/AccountManager
       dockerfile: Dockerfile
+    depends_on:
+      db-accessor:
+        condition: service_started
     ports:
       - "7072:80"
     environment:
@@ -37,6 +44,9 @@ services:
     build:
       context: ./logic-layer/Logic
       dockerfile: Dockerfile
+    depends_on:
+      db-accessor:
+        condition: service_started
     ports:
       - "7071:80"
     environment:
@@ -50,6 +60,11 @@ services:
     build:
       context: ./web-client
       dockerfile: Dockerfile
+    depends_on:
+      logic:
+        condition: service_started
+      account-manager:
+        condition: service_started
     ports:
       - "3000:3000"
     environment:
